@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClockWork — Simple</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="corner">
+    <select id="tz-select" aria-label="Select timezone"></select>
+  </header>
+
+  <main class="wrap">
+    <section class="main-clock">
+      <div id="main-time" class="time">--:-- -- seconds</div>
+      <div id="main-year" class="year">Year ----</div>
+    </section>
+
+    <section class="controls">
+      <div class="countdown-card">
+        <div class="label">Countdown to Christmas</div>
+        <div id="countdown" class="count">-- days 00:00:00</div>
+      </div>
+
+      <div class="custom-card">
+        <div class="label">Your clocks</div>
+        <form id="new-clock-form" class="form-inline">
+          <input id="clock-name" placeholder="Name (e.g., Home)" required>
+          <select id="clock-tz"></select>
+          <button type="submit">Add</button>
+        </form>
+        <ul id="clocks-list" class="clocks-list" aria-live="polite"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">ClockWork — simple • precise seconds</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
